@@ -1,4 +1,6 @@
---Carrot Internal Src
+-- Gui to Lua
+-- Version: 3.2
+
 -- Instances:
 
 local ScreenGui = Instance.new("ScreenGui")
@@ -97,34 +99,31 @@ KickSelf.TextWrapped = true
 
 -- Scripts:
 
-local function MSOBN_fake_script() -- EXECUTOR.drag 
+local function ZNWQQP_fake_script() -- EXECUTOR.drag 
 	local script = Instance.new('LocalScript', EXECUTOR)
 
 	script.Parent.Active = true
 	script.Parent.Draggable = true
 end
-coroutine.wrap(MSOBN_fake_script)()
-local function WKAPPK_fake_script() -- EXECUTOR.ToggleUI 
+coroutine.wrap(ZNWQQP_fake_script)()
+local function VGSFZ_fake_script() -- EXECUTOR.ToggleUI 
 	local script = Instance.new('LocalScript', EXECUTOR)
 
 	local GUI = script.Parent
-	local Blur = game.Lighting.Blur
 	local UserInputService = game:GetService("UserInputService")
 	
 	UserInputService.InputBegan:Connect(function(input)
 		if input.KeyCode == Enum.KeyCode.Delete then
 			if GUI.Visible then
 				GUI.Visible = false
-				Blur.Size = 0
 			else
 				GUI.Visible = true
-				Blur.Size = 21
 			end
 		end
 	end)
 end
-coroutine.wrap(WKAPPK_fake_script)()
-local function UTDDJAF_fake_script() -- Execute.ExecuteScript 
+coroutine.wrap(VGSFZ_fake_script)()
+local function QNOVWQ_fake_script() -- Execute.ExecuteScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local textbox = script.Parent.Parent.TextBox
@@ -132,8 +131,8 @@ local function UTDDJAF_fake_script() -- Execute.ExecuteScript
 		loadstring(textbox.Text)()
 	end)
 end
-coroutine.wrap(UTDDJAF_fake_script)()
-local function YHOGZVC_fake_script() -- Clear.ClearTextbox 
+coroutine.wrap(QNOVWQ_fake_script)()
+local function KMYVLT_fake_script() -- Clear.ClearTextbox 
 	local script = Instance.new('LocalScript', Clear)
 
 	local textbox = script.Parent.Parent.TextBox
@@ -141,12 +140,12 @@ local function YHOGZVC_fake_script() -- Clear.ClearTextbox
 		textbox.Text = ""
 	end)
 end
-coroutine.wrap(YHOGZVC_fake_script)()
-local function IEVY_fake_script() -- KickSelf.KickCurrentPlayer 
+coroutine.wrap(KMYVLT_fake_script)()
+local function AGRJFA_fake_script() -- KickSelf.KickCurrentPlayer 
 	local script = Instance.new('LocalScript', KickSelf)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game.Players.LocalPlayer:Kick()
 	end)
 end
-coroutine.wrap(IEVY_fake_script)()
+coroutine.wrap(AGRJFA_fake_script)()
